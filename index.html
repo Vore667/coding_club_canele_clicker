@@ -13,7 +13,7 @@
     
 </head>
 
-<body>
+<body onLoad="time();">
     <nav class="navbar navbar-light navbar-expand-md custom-header">
         <div class="container-fluid">
             <div><a class="navbar-brand" href="#">Canelé Corp</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
@@ -36,8 +36,16 @@
         <center>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12"><img class="img-fluid" src="assets/img/1200px-Caneles_stemilion.jpg">
+                
+                <div class="col-md-12">
+                    <img class="img-fluid" src="assets/img/1200px-Caneles_stemilion.jpg">
                     <h5 class="text-center" style="color: rgb(255,112,32);">Vous avez <span id="pCanele">0</span> canelé(s)</h5>
+                    <audio controls autoplay loop>
+                        <source src="SourisVerte.mp3" type="audio/mpeg">
+                        <p>Votre navigateur ne prend pas en charge l'audio HTML. Voici un
+                           un <a href="SourisVerte.mp3">lien vers le fichier audio</a> pour le 
+                           télécharger.</p>
+                      </audio>
                 </div>
             </div>
             <div class="row">
@@ -48,7 +56,14 @@
                 <div class="col-md-6 align-items-center align-content-center align-self-center">
                     <img onClick="buyOven()" id="four" class="img-fluid" src="assets/img/block.jpg">
                     <h4 id=""class="text-center" style="color: rgb(255,112,32);">Acheter un four (25 canelés)(clique sur l'image)</h4>
-                    <h4 class="text-center" style="color: rgb(255,112,32);">Vous avez <span id="number">0</span> fours</h4>
+                    <h4 class="text-center" style="color: rgb(255,112,32);">Vous avez <span id="number">0</span> four(s)</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img onClick="sell()" id="four" class="img-fluid" src="assets/img/camion.png">
+                    <h4 id=""class="text-center" style="color: rgb(255,112,32);">Vendre canelés (100 canelés)(clique sur l'image)</h4>
+                    <h4 class="text-center" style="color: rgb(255,112,32);">Compte banquaire : <span id="monnaie"> 0</span>€ Oui tu es riche.</h4>
                 </div>
             </div>
         </div>
@@ -58,7 +73,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-3">
-                    <h4>La boulangerie</h4>
+                    <h4>La boulangerie.</h4>
                     <ul class="footer-links">
                         <li><a href="#">222 rue de la Pauvreté</a></li>
                         <li><a href="#">Riche - Sur - Mer</a></li>
